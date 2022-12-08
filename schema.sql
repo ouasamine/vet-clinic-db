@@ -38,3 +38,20 @@ CREATE TABLE vets(
     date_of_graduation  DATE,
     PRIMARY KEY(id)
 );
+
+CREATE TABLE specializations(
+    vet_id      INT,
+    species_id  INT,
+    PRIMARY KEY(vet_id, species_id),
+    FOREIGN KEY(vet_id) REFERENCES vets(id),
+    FOREIGN KEY(species_id) REFERENCES species(id)
+);
+
+CREATE TABLE visits(
+    vet_id      INT,
+    animal_id   INT,
+    date        DATE,
+    PRIMARY KEY(vet_id, animal_id, date),
+    FOREIGN KEY(vet_id) REFERENCES vets(id),
+    FOREIGN KEY(animal_id) REFERENCES animals(id)
+);

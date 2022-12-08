@@ -34,3 +34,5 @@ UPDATE animals SET owner_id=(SELECT id FROM owners WHERE owners.full_name='Jenni
 UPDATE animals SET owner_id=(SELECT id FROM owners WHERE owners.full_name='Bob') WHERE animals.name IN ('Devimon', 'Plantmon');
 UPDATE animals SET owner_id=(SELECT id FROM owners WHERE owners.full_name='Melody Pond') WHERE animals.name IN ('Charmander', 'Squirtle', 'Blossom');
 UPDATE animals SET owner_id=(SELECT id FROM owners WHERE owners.full_name='Dean Winchester') WHERE animals.name IN ('Angemon', 'Boarmon');
+
+
